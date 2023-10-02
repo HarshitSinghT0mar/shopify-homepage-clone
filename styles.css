@@ -101,6 +101,14 @@ body {
   height: 80%;
   width: 100%;
   position: relative;
+  background-image: url('https://new-ella-demo.myshopify.com/cdn/shop/files/slideshow-1.jpg?v=1632195167&width=1880');
+}
+.hero-section-2 {
+  background-size: cover;
+  height: 80%;
+  width: 100%;
+  position: relative;
+  background-image: url('https://new-ella-demo.myshopify.com/cdn/shop/files/banner-1-compressor.jpg?v=1632456769&width=2000');
 }
 
 .hero-section-text {
@@ -150,6 +158,7 @@ body {
 .category-section {
   display: flex;
   justify-content: space-evenly;
+  /* flex-wrap: wrap; */
   gap: 2rem;
   padding: 3rem;
 }
@@ -292,35 +301,38 @@ justify-content: center;
   
   .footer {
     background-color: #232323;
-    color: white;
+    color: #ccc;
     padding: 20px 0;
     padding: 3rem;
   }
   
   .footer-columns {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin-bottom:2rem ;
+    gap: 8rem;
   }
   
-  .footer-column {
-    flex-basis: 33%;
-  }
+  
   
   .footer-heading {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: white;
   }
   
   .footer-list {
     list-style-type: none;
     padding: 0;
+
+
   }
   
   .footer-list li {
     margin-bottom: 5px;
     font-size: 12px;
- 
+
   }
   
   .footer-list a {
@@ -340,17 +352,145 @@ justify-content: center;
     font-size: 12px;
     display: flex;
     justify-content: space-between;
+    
+  }
+ .newsletter-signup{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.7rem;
+ }
+  
+  .newsletter-signup-heading {
+    font-size: 16px;
+    font-weight: bold;
+   
+    color: white;
   }
   
-  /* Responsive CSS */
+  .newsletter-signup-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+ 
+    background-color: transparent;
+   
+  }
+  .newsletter-input-button-container{
+    display: flex;
+    
+    gap: 1rem;
+  }
+
+  ::placeholder{
+    color: #ccc;
+    font-size: 10px;
+  }
   
-  @media (max-width: 576px) {
-    .footer-columns {
+  .newsletter-signup-button {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 2rem;
+    border: 1px solid black;
+  height: 100%;
+    cursor: pointer;
+  }
+  
+  .newsletter-signup-button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+
+
+  
+ 
+  
+/* Responsive Media Query for screens up to 768px */
+@media (max-width: 768px) {
+  /* Header styles for smaller screens */
+  .main-header {
       flex-direction: column;
-    }
-  
-    .footer-column {
-      flex-basis: 100%;
-    }
+      align-items: center;
+      text-align: center;
+      display: none;
   }
+
+  .body{
+    width: 100%;
+  }
+
+  .header-info {
+      flex-direction: column;
+  }
+
+  .language-currency {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .language, .currency {
+      margin-top: 10px;
+  }
+
+  /* Navigation styles for smaller screens */
+  .main-navigation {
+      flex-direction: column;
+  }
+
+  .nav-item {
+      flex: none;
+      margin-bottom: 10px;
+  }
+  
+
+  .nav-icon {
+      max-width: 12px;
+  }
+
+  /* Hero Section styles for smaller screens */
+  .hero-section {
+      background-image:url('https://new-ella-demo.myshopify.com/cdn/shop/files/slide1-mb-min.jpg?v=1661416101&width=375') ;
+      background-position: center;
+      color: white;
+  }
+
+  .hero-section-2{
+    background-image:url('https://new-ella-demo.myshopify.com/cdn/shop/files/banner-1-mb-min.jpg?v=1632459215&width=750') ;
+    background-position: center;
+    color: white;
+  }
+  
+ .line{
+  border-color: white;
+ 
+ }
+  .cta-button {
+      width: 80%;
+  }
+  .products-container{
+    flex-wrap: wrap;
+  }
+
+  /* Product card styles for smaller screens */
+  .product-card {
+    min-width: 100%;
+
+  }
+
+  .category-section{
+    flex-wrap: wrap;
+  }
+
+  .footer{
+    max-width: 100%;
+  }
+.footer-column {
+    flex: 1;
+}
+
+}
+
   
